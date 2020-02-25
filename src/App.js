@@ -9,9 +9,9 @@ import { GlobalProvider } from './context/GlobalState';
 
 const App = () => (
   <GlobalProvider>
-    <div className="container h-100">
-      <div className="row h-100">
-        <div className="py-5 col-4 mx-auto d-flex flex-column justify-content-center align-items-center">
+    <div className="container">
+      <div className="row">
+        <div className="py-5 col-4 mx-auto d-flex flex-column align-items-center">
           <Header />
           <div className="my-3" />
           <Balance />

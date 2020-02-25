@@ -9,8 +9,16 @@ const History = () => {
     <div className="w-100">
       <h5 className="font-weight-bold">History</h5>
       <hr />
-      <Transaction title="Cash" amount={500} />
-      <Transaction title="Food" amount={-30} />
+      {
+        transactions.map((x) => (
+          <Transaction
+            key={x.id}
+            id={x.id}
+            description={x.description}
+            amount={x.amount}
+          />
+        ))
+      }
     </div>
   );
 };

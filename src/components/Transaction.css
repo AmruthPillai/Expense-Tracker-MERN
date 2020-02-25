@@ -5,3 +5,29 @@
 #Transaction.expense {
   border-right: 5px solid red;
 }
+
+#Transaction #delete {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+#Transaction #amount {
+  position: relative;
+  right: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+#Transaction:hover #amount {
+  position: relative;
+  right: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+#Transaction:hover #delete {
+  position: absolute;
+  right: 10px;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
