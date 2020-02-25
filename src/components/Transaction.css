@@ -1,0 +1,7 @@
+#Transaction.income {
+  border-right: 5px solid green;
+}
+
+#Transaction.expense {
+  border-right: 5px solid red;
+}
