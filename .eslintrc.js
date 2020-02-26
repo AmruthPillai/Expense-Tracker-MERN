@@ -1,33 +1,20 @@
 module.exports = {
   env: {
-    browser: true,
+    commonjs: true,
     es6: true,
+    node: true,
   },
   extends: [
-    'plugin:react/recommended',
-    'airbnb',
+    'airbnb-base',
   ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
     ecmaVersion: 2018,
-    sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
   rules: {
-    'no-return-assign': 0,
-    'react/prop-types': 0,
-    'no-param-reassign': 0,
-    'react/jsx-filename-extension': 0,
-    'jsx-a11y/label-has-associated-control': 0,
-    'jsx-a11y/click-events-have-key-events': 0,
-    'jsx-a11y/no-static-element-interactions': 0,
+    'no-console': 0,
   },
 };
