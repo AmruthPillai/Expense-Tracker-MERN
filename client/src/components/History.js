@@ -1,9 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Transaction from './Transaction';
 import { GlobalContext } from '../context/GlobalState';
 
 const History = () => {
-  const { transactions } = useContext(GlobalContext);
+  const { transactions, getTransactions } = useContext(GlobalContext);
+
+  useEffect(() => {
+    getTransactions();
+  // eslint-disable-next-line
+  }, []);
 
   return (
     <div className="w-100">
@@ -12,8 +17,8 @@ const History = () => {
       {
         transactions.map((x) => (
           <Transaction
-            key={x.id}
-            id={x.id}
+            key={x._id}
+            id={x._id}
             description={x.description}
             amount={x.amount}
           />
